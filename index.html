@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/javascript.min.js"></script>
   <style>
     .shower {
       --slide-ratio: calc(16 / 9);
@@ -68,20 +69,35 @@
     </style>
   </section>
 
+  <section class="slide clear" id="cover">
+    <h2 class="shout">Про сервис-воркеры. Снова!</h2>
+    <figure>
+      <img class="cover" src="pictures/clones.jpg" alt="React icon">
+    </figure>
+    <style>
+      #cover h2 {
+        background-color: black;
+        color: white;
+        font-size: 75px;
+        padding: .2em;
+      }
+    </style>
+  </section>
+
   <section class="slide clear">
     <ul style="margin-right: 300px;">
       <li class="next">Постоянный ведущий известного подкаста</li>
-      <li class="next">Организатор одного из крупных фронтенд сообществ </li>
+      <li class="next">Организатор фронтенд-сообществ </li>
       <li class="next">Просто хороший человек</li>
       <img src="pictures/vadimMakeev_edited.jpg" alt="Фотография Вадима Макеева" class="place right cover height z-top next">
     </ul>
   </section>
 
   <section class="slide clear">
-      <figure>
-        <img class="cover" src="pictures/here.jpg" alt="Стрелочки на меня">
-      </figure>
-    </section>
+    <figure>
+      <img class="cover" src="pictures/here.jpg" alt="Стрелочки на меня">
+    </figure>
+  </section>
 
   <section class="slide clear">
     <h2 style="margin-left: 350px;">Кирилл Чугаинов</h2>
@@ -95,19 +111,14 @@
     <h2 class="shout">???</h2>
   </section>
 
-  <section class="slide clear" id="wolf-again">
+  <section class="slide clear">
     <figure>
-      <img class="cover" src="pictures/Sadness_edited.jpg" alt="Собака грустит">
+      <img class="cover" src="pictures/sadness.jpg" alt="Штурмовик грустит">
     </figure>
-    <style>
-      #wolf-again {
-        background-color: #0D1430;
-      }
-    </style>
   </section>
 
   <section class="slide">
-    <h2>Почему вы не используете SW?</h2>
+    <h2>Почему вы не используете <br>сервис-воркеры?</h2>
     <ol>
       <li class="next">Ну мы используем, но так, там картинки вроде закэшировали...</li>
       <li class="next">А что это?</li>
@@ -288,11 +299,18 @@
     </figure>
   </section>
 
-  <section class="slide">
-    <h2 class="shout" style="color: red;">слайд с медленной загрузкой</h2>
+  <section class="slide clear" style="background-color: black; ">
+    <video src="./pictures/slow-site.mp4" class="cover height" autoplay="" muted="" playsinline=""></video>    
   </section>
 
-  <section class="slide" id="episode-1">
+  <section class="slide clear">
+    <h2 class="visually-hidden">Ты должен был помочь</h2>
+    <figure>
+      <img class="cover" src="pictures/problems.jpg" alt="Оби Ван кричит">
+    </figure>
+  </section>
+
+  <section class="slide clear" id="episode-1">
     <h2 class="place sw-font">SW: Эпизод 1 Кэширование всего</h2>
     <style>
       #episode-1 {
@@ -306,24 +324,25 @@
   </section>
 
   <section class="slide">
-    <h2>Идея</h2>
-    <p style="color: red;">
-      Картинка со схемой 
-    </p>
+    <h2>Помещаем файлы в кэш</h2>
+    <figure>
+      <img class="cover" src="pictures/cahse-first-1.png" alt="Схема кэширования">
+    </figure>
   </section>
   
   <section class="slide">
-    <h2>Идея</h2>
-    <p style="color: red;">
-      Картинка со схемой 
-    </p>
+    <h2>Используем файлы из кэша</h2>
+    <figure>
+      <img class="cover" src="pictures/cahse-first-2.png" alt="Схема кэширования">
+    </figure>
   </section>
 
   <section class="slide">
-    <h2>Пример</h2>
-    <p style="color: red;">
-      видосик плохой
-    </p>
+    <h2 class="shout" style="font-size: 70px;">Первый раз сервис-воркер никак не поможет</h2>   
+  </section>
+
+  <section class="slide clear" style="background: black; ">
+    <video src="./pictures/Slow-internet.mp4" class="cover height" autoplay="" loop="" muted="" playsinline=""></video>
   </section>
 
   <section class="slide" id="code-sw-1">
@@ -331,9 +350,9 @@
     <div class="columns two">
       <pre>
         <code>const filesForCashe = [</code>
-        <code>'/styles/main.css'</code>
-        <code>'/scripts/script.js'</code>
-        <code>'/pictures/logo.png'</code>
+        <code>  '/styles/main.css'</code>
+        <code>  '/scripts/script.js'</code>
+        <code>  '/pictures/logo.png'</code>
         <code><mark>...</mark></code>
         <code>];</code>
       </pre>
@@ -362,42 +381,36 @@
     </style>
   </section>
 
-  <section class="slide">
-    <h2>Пример</h2>
-    <p style="color: red;">
-      видосик с медленным интернетом
-    </p>
+  <section class="slide clear" style="background: black; ">
+    <video src="./pictures/Slow-internet-sw.mp4" class="cover height" autoplay="" loop="" muted="" playsinline=""></video>
+  </section>
+
+  <section class="slide clear" style="background: black; ">
+    <video src="./pictures/no-internet-sw.mp4" class="cover height" autoplay="" loop="" muted="" playsinline=""></video>
   </section>
 
   <section class="slide">
-    <h2>Пример</h2>
-    <p style="color: red;">
-      видосик без интернета
-    </p>
-  </section>
-
-  <section class="slide">
-    <h2>Где применимо</h2>
+    <h2>Где применять хорошо</h2>
     <ul>
-      <li>Файлы обновляются редко</li>
-      <li>Нет постоянного общения с сервером</li>
       <li>Много статики</li>
+      <li>Редкое обновление статики</li>
+      <li>Приложение, не требующее поддержки соединения с сервером</li>
     </ul>
   </section>
   
   <section class="slide">
-    <h2>Не лучшая идея</h2>
+    <h2>Где применять плохо</h2>
     <ul>
       <li>Большой размер файлов</li>
-      <li>Использование части файлов — под вопросом</li>
+      <li>Файлы могут не потребоваться</li>
     </ul>
   </section>
 <!-- -------------------------------- -->
 
-<section class="slide" id="episode-1">
+<section class="slide clear" id="episode-2">
   <h2 class="place sw-font">SW: Эпизод 2 Выборочный офлайн</h2>
   <style>
-    #episode-1 {
+    #episode-2 {
       background-color: black;
     }
   </style>
@@ -408,62 +421,60 @@
 </section>
 
 <section class="slide">
-  <h2>Идея</h2>
-  <p style="color: red;">
-    Картинка со схемой
-  </p>
+  <h2>Помещаем файлы в кэш по запросу</h2>
+  <figure>
+    <img class="cover" src="pictures/save-to-off-1.png" alt="Схема кэширования по запросу">
+  </figure>
+</section>
+
+<section class="slide clear">
+  <video src="./pictures/save-for-offline.mp4" class="cover" autoplay="" loop="" muted="" playsinline=""></video>
 </section>
 
 <section class="slide">
-  <h2>Пример</h2>
-  <p style="color: red;">
-    видосик плохой
-  </p>
-</section>
-
-<section class="slide">
-  <h2>Пример</h2>
-  <p style="color: red;">
-    видосик хороший
-  </p>
-</section>
-
-<section class="slide">
-  <h2>Где применимо</h2>
+  <h2>Где применять хорошо</h2>
   <ul>
-    <li>Файлы обновляются редко</li>
-    <li>Нет постоянного общения с сервером</li>
-    <li>Есть страницы, которые могут понадобиться офлайн</li>
+    <li>Редкое обновление статики</li>
+    <li>Приложение, не требующее поддержки соединения с сервером</li>
+    <li>Наличие страниц, которые могут понадобиться офлайн</li>
   </ul>
 </section>
 
 <section class="slide">
-  <h2>Не лучшая идея</h2>
+  <h2>Где применять плохо</h2>
   <ul>
-    <li>Использование части файлов — под вопросом</li>
+    <li>Страницы с динамическими данными</li>
   </ul>
 </section>
 <!-- -------------------------------- -->
 
-<section class="slide" id="episode-1">
+<section class="slide clear" id="episode-3">
   <h2 class="place sw-font">SW: Эпизод 3 Резервный ответ</h2>
   <style>
-    #episode-1 {
+    #episode-3 {
       background-color: black;
     }
   </style>
 </section>
 
 <section class="slide">
-  <p style="color: red;">
-    Взрыв планеты
-  </p>
+  <figure>
+    <img class="cover" src="pictures/404.jpg" alt="Адмирал Акбар кричити это 404">
+  </figure>
 </section>
 
 <section class="slide">
-  <p style="color: red;">
-    Динозаврики
-  </p>
+  <h2>Сеть недоступна</h2>
+  <figure>
+    <img class="cover" src="pictures/dinos.png" alt="Нет доступа к сети">
+  </figure>
+</section>
+
+<section class="slide clear">
+  <h2 class="visually-hidden">Сеть недоступна</h2>
+  <figure>
+    <img class="cover" src="pictures/else-droids.jpg" alt="это не те дроиды, которых вы ищете">
+  </figure>
 </section>
 
 <section class="slide">
@@ -472,30 +483,20 @@
 
 <section class="slide">
   <h2>Идея</h2>
-  <p style="color: red;">
-    Картинка со схемой
-  </p>
+  <figure>
+    <img class="cover" src="pictures/embedded.png" alt="идея резервного ответа">
+  </figure>
 </section>
 
 <section class="slide">
   <h2>Пример</h2>
   <p style="color: red;">
-    видосик плохой
+    видосик 
   </p>
 </section>
 
 <section class="slide">
-  <h2>Пример</h2>
-  <p style="color: red;">
-    видосик хороший
-  </p>
-</section>
-
-<section class="slide">
-  <h2>Где применимо</h2>
-  <ul>
-    <li>Практически везде</li>
-  </ul>
+  <h2 class="shout">Любой сайт</h2>
 </section>
 <!-- -------------------------------- -->
 
@@ -507,21 +508,24 @@
 </section>
 
 <section class="slide">
-  <p style="color: red;">
-    Видео с большой формой
-  </p>
+  <video src="./pictures/form.mp4" class="cover" autoplay="" loop="" muted="" playsinline=""></video>
 </section>
 
-<section class="slide">
+<section class="slide clear" style="background-color: black;">
+  <video src="./pictures/broken-server.mp4" class="cover" autoplay="" loop="" muted="" playsinline=""></video>
+</section>
+
+<section class="slide clear">
+  <h2 class="visually-hidden">Неееееет</h2>
   <figure>
-    <img class="cover" src="pictures/broken-server.gif" alt="Взрыв звезды смерти">
+    <img class="cover" src="pictures/noooooooo.jpg" alt="Люк Скайуокер кричит нееееет">
   </figure>
 </section>
 
-<section class="slide" id="episode-1">
+<section class="slide clear" id="episode-4">
   <h2 class="place sw-font">SW: Эпизод 4 Отложенная отправка</h2>
   <style>
-    #episode-1 {
+    #episode-4 {
       background-color: black;
     }
   </style>
@@ -533,9 +537,30 @@
 
 <section class="slide">
   <h2>Идея</h2>
-  <p style="color: red;">
-    Картинка со схемой
-  </p>
+  <figure>
+    <img class="cover" src="pictures/demand-sending.png" alt="Схема отложенной отправки">
+  </figure>
+</section>
+
+<section class="slide">
+  <h2>Background Sync API</h2>
+  <pre>
+    <code>navigator.serviceWorker.ready</code>
+    <code>  .then(function(swRegistration) {</code>
+    <code>    return swRegistration.sync.register('mySync');</code>
+    <code>  });</code>
+  </pre>
+</section>
+
+<section class="slide">
+  <h2>Background Sync API</h2>
+  <pre>
+    <code>self.addEventListener('sync', function(event) {</code>
+    <code>  if (event.tag == 'mySync') {</code>
+    <code>    event.waitUntil(<mark>doSomeStuff()</mark>);</code>
+    <code>  }</code>
+    <code>});</code>
+  </pre>
 </section>
 
 <section class="slide">
@@ -543,7 +568,7 @@
 </section>
 
 <section class="slide">
-  <h2>Где применимо</h2>
+  <h2>Где применять хорошо</h2>
   <ul>
     <li>Там, где есть формы</li>
     <li>Там, где есть отправка данных</li>
@@ -551,7 +576,7 @@
 </section>
 
 <section class="slide">
-  <h2>Где не применимо</h2>
+  <h2>Где применять плохо</h2>
   <ul>
     <li>Там, где важна скорость отправки</li>
     <li>Там, где важна актуальность данных</li>
@@ -560,28 +585,59 @@
 
 <!-- -------------------------------- -->
 
-<section class="slide" id="episode-1">
-  <h2 class="place sw-font">SW: Эпизод 5 Обновление данных</h2>
+<section class="slide clear" id="episode-5">
+  <h2 class="place sw-font">SW: Эпизод 5 Загрузка кусками</h2>
   <style>
-    #episode-1 {
+    #episode-5 {
       background-color: black;
     }
   </style>
 </section>
 
 <section class="slide">
-  <h2 class="shout" style="font-size: 70px;">Проблема: <br>обновление данных без постоянного запроса пользователя</h2>   
+  <h2 class="shout" style="font-size: 70px;">Проблема: <br>большой файл, который нужно загрузить</h2>   
 </section>
 
 <section class="slide">
   <h2>Идея</h2>
-  <p style="color: red;">
-    Картинка со схемой
-  </p>
+  <figure>
+    <img class="cover" src="pictures/big-file-1.png" alt="идея загрузки большого файла">
+  </figure>
+</section>
+
+<section class="slide">
+  <h2>Идея</h2>
+  <figure>
+    <img class="cover" src="pictures/big-file-2.png" alt="идея загрузки большого файла">
+  </figure>
+</section>
+
+<section class="slide">
+  <h2 class="shout" style="font-size: 80px;">Content-Length и Range</h2>
+</section>
+
+<section class="slide">
+  <h2>Добавить заголовок</h2>
+  <pre>
+    <code>fetch(url, {</code>
+    <code>  headers: {</code>
+    <code>    Range: 'bytes=START_RANGE - END_RANGE / TOTAL'</code>
+    <code>  }</code>
+    <code>});</code>
+  </pre>
+</section>
+
+<section class="slide clear">
+  <figure>
+    <img class="cover" src="pictures/dev-tools-loads.jpg_large" alt="как загружаются данные">
+  </figure>
 </section>
 
 <section class="slide">
   <h2 class="shout">Рекомендации</h2>
+  <figure>
+    <img class="place bottom right" width="200" height="auto" src="pictures/yoda.jpg" alt="мастер йода">
+  </figure>
 </section>
 
 <section class="slide" id="advice-1">
@@ -591,6 +647,20 @@
       font-size: 80px;
     } 
   </style>
+</section>
+
+<section class="slide" style="background-color: #F6E9D5;">
+  <h2 class="visually-hidden">Поддержка сервис-воркеров</h2>
+  <figure>
+    <img class="cover" src="pictures/ciu-sw.PNG" alt="Поддержка сервис-воркеров">
+  </figure>
+</section>
+
+<section class="slide" style="background-color: #F6E9D5;">
+  <h2 class="visually-hidden">Поддержка Background Sync</h2>
+  <figure>
+    <img class="cover" src="pictures/ciu-bs.PNG" alt="Поддержка Background Sync">
+  </figure>
 </section>
 
 <section class="slide">
@@ -613,7 +683,19 @@
       font-size: 80px;
     } 
   </style>
-</section>  
+</section>
+
+<section class="slide">
+  <h2 class="visually-hidden">Задачка</h2>
+  <pre class="place large-code">
+    <code>const casheName = self.cashePrefix + '-cashe';</code>
+  </pre>
+  <style>
+    .large-code {
+      font-size: 35px;
+    }
+  </style>
+</section>
 
 <section class="slide" id="advice-3">
   <h2 class="shout">Не стоит полагаться на глобальное состояние скрипта</h2>
@@ -622,10 +704,51 @@
       font-size: 75px;
     } 
   </style>
-</section> 
+</section>
+
+<section class="slide">
+  <h2>Кто использует?</h2>
+  <figure>
+    <img class="cover" src="pictures/who-uses.png" alt="кто использует сервис-воркеры">
+  </figure>
+</section>
+
+<section class="slide">
+  <figure>
+    <img class="top" width="200" height="auto" src="pictures/aliexpress.jpg" alt="логотип алиэкспресс">
+  </figure>
+  <ul>
+    <li><span class="mark">104% рост</span> конверсии для новых пользователей</li>
+    <li><span class="mark">82% рост</span> конверсии на iOS</li>
+    <li><span class="mark">В 2 раза больше</span> посещённых страниц</li>
+    <li><span class="mark">74% увеличение</span> времени сессии</li>
+  </ul>
+  <style>
+    .mark {
+      font-weight: bold;
+      color: red;
+    }
+  </style>
+</section>
+
+<section class="slide" id="book">
+  <a href="https://www.awwwards.com/PWA-ebook/"> 
+    <h2 class="link" style="font-size: 60px;">PWA — будущее мобильного веба</h2>
+  </a>
+  <figure>
+    <img class="place bottom" width="800" height="auto" src="pictures/book.jpg" alt="книга про PWA">
+  </figure>
+  <style>
+    #book .link {
+      text-decoration: underline;
+      font-size: 75px;
+      padding-bottom: .1em;
+    }
+  </style>
+</section>
 
 <section class="slide" id="links">
-  <a href="https://github.com/KirylChuhainau/react-performance/blob/master/links.txt"> 
+  <a href=""> 
     <h2 class="shout link" style="font-size: 100px; color: white;">ссылка на ссылки</h2>
   </a>
   <figure>
