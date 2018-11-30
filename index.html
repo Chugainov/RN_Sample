@@ -365,7 +365,7 @@
     <h2>В сервис-воркере</h2>
     <div class="columns two">
       <pre>
-        <code>const filesForCashe = [</code>
+        <code>const filesForCache = [</code>
         <code>  '/styles/main.css'</code>
         <code>  '/scripts/script.js'</code>
         <code>  '/pictures/logo.png'</code>
@@ -376,7 +376,7 @@
         <code>self.addEventListener('install', (e) => {</code>
         <code>  e.waitUntil(</code>
         <code>    caches.open(<mark>'cache-name'</mark>).then(function (cache) {</code>
-        <code>      return cache.addAll(<mark>filesForCashe</mark>);</code>
+        <code>      return cache.addAll(<mark>filesForCache</mark>);</code>
         <code>  })</code>
         <code> );</code>
         <code>});</code>
@@ -742,8 +742,8 @@
   <section class="slide">
     <h2 class="visually-hidden">Задачка</h2>
     <pre class="place large-code">
-      <code>const casheName =
-      self.cashePrefix + '-cashe';</code>
+      <code>const cacheName =
+      self.cachePrefix + '-cache';</code>
     </pre>
     <style>
       .large-code {
@@ -810,6 +810,10 @@
     </style>
   </section>
 
+  <section class="slide">
+    <a href="https://twitter.com/Chugainovkirill" class="place" style="font-size: 60px;">@Chugainovkirill</a>
+  </section>
+  
   <section class="slide">
     <h2 class="shout">Спасибо за внимание!</h2>
   </section>
