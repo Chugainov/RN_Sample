@@ -179,9 +179,15 @@
   </section>
 
   <section class="slide">
-    <figure>
-      <img class="cover" src="pictures/c-r-a.PNG" alt="Твит Дэна Абрамова про то, что сервис-воркер больше не включён по умолчанию">
-    </figure>
+    <div class="place">
+      <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en">
+        <p lang="en" dir="ltr">Service workers are opt-in in the next version of Create React App. They are an amazing technology but the pitfalls today are too significant to be a good default. Will revisit in a year or two! 
+          <a href="https://t.co/UPqiLKnZzB">pic.twitter.com/UPqiLKnZzB</a>
+        </p>&mdash; Dan Abramov (@dan_abramov) 
+          <a href="https://twitter.com/dan_abramov/status/954146978564395008?ref_src=twsrc%5Etfw">January 19, 2018</a>
+        </blockquote>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
   </section>
   
   <section class="slide" id="articles">
@@ -229,9 +235,9 @@
       <li><a href="https://www.youtube.com/watch?v=BfL3pprhnms">How to Setup a Basic Service Worker (with Caching)</a></li>
       <li><a href="https://www.youtube.com/watch?v=__xAtWgfzvc">How does a service worker work?</a></li>
       <li><a href="https://www.youtube.com/watch?v=A6MHtKkA0CA">What is a service workers</a></li>
-      <li><a href="https://www.youtube.com/watch?v=QaxdXXB50B8">«Краткое введние в Service Workers» из подкаста Суровый веб #113</a></li>
+      <li><a href="https://www.youtube.com/watch?v=QaxdXXB50B8">Краткое введние в Service Workers в подкасте Суровый веб #113</a></li>
       <li><a href="https://www.oreilly.com/ideas/what-is-a-service-worker">What is a service worker?</a></li>
-      <li><a href="https://www.youtube.com/watch?v=MlvkwBvn3jw">"Сервис воркеры: используем накопленные знания для светлого будущего PWA", Максим Сальников</a></li>
+      <li><a href="https://www.youtube.com/watch?v=MlvkwBvn3jw">Сервис воркеры: используем накопленные знания для светлого будущего PWA, Максим Сальников</a></li>
     </ol>
     <style>
       #videos {
@@ -736,7 +742,8 @@
   <section class="slide">
     <h2 class="visually-hidden">Задачка</h2>
     <pre class="place large-code">
-      <code>const casheName = self.cashePrefix + '-cashe';</code>
+      <code>const casheName =
+      self.cashePrefix + '-cashe';</code>
     </pre>
     <style>
       .large-code {
@@ -774,25 +781,15 @@
     <style>
       .mark {
         font-weight: bold;
-        color: red;
+        color: #c00;
       }
     </style>
   </section>
 
-  <section class="slide" id="book">
-    <a href="https://www.awwwards.com/PWA-ebook/"> 
-      <h2 class="link" style="font-size: 60px;">PWA — будущее мобильного веба</h2>
+  <section class="slide clear" id="book">
+    <a href="https://www.awwwards.com/PWA-ebook/">
+      <img class="cover"src="pictures/book.jpg" alt="книга про PWA">
     </a>
-    <figure>
-      <img class="place bottom" width="800" height="auto" src="pictures/book.jpg" alt="книга про PWA">
-    </figure>
-    <style>
-      #book .link {
-        text-decoration: underline;
-        font-size: 75px;
-        padding-bottom: .1em;
-      }
-    </style>
   </section>
 
   <section class="slide" id="links">
